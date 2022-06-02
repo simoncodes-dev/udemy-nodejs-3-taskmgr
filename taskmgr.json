@@ -41,7 +41,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /tasks/{id}:
     get:
-      summary: 'Returns a list of tasks'
+      summary: 'Read Task By Id'
       operationId: listTasks
       tags:
         - task
