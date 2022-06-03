@@ -13,7 +13,6 @@ router.post('/tasks', async (req, res) => {
     }
 })
 
-
 //Fetch multiple tasks with GET method.
 router.get('/tasks', async (req, res) => {
     
