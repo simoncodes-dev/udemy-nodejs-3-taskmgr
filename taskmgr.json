@@ -8,8 +8,8 @@ servers:
   - url: 'localhost:3000'
 paths:
   /users:
-    get:
-      summary: 'Sample endpoint: Returns details about a particular user'
+    post:
+      summary: 'Create a new user via some signup method'
       operationId: listUser
       tags:
         - user
