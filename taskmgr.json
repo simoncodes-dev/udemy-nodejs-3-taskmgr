@@ -25,8 +25,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-        default:
-          description: Unexpected error
+        '400':
+          description: Bad Request
           content:
             application/json:
               schema:
