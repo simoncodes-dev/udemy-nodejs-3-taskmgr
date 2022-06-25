@@ -10,20 +10,12 @@ paths:
   /users:
     post:
       summary: 'Create a new user via some signup method'
-      operationId: listUser
+      operationId: createUser
       tags:
         - user
-      parameters:
-        - name: id
-          in: query
-          description: ID of the user
-          required: true
-          schema:
-            type: integer
-            format: int32
       responses:
-        '200':
-          description: 'Sample response: Details about a user by ID'
+        '201':
+          description: 'Returns user and JWT token'
           headers:
             x-next:
               description: A link to the next page of responses
