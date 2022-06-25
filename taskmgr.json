@@ -8,22 +8,14 @@ servers:
   - url: 'localhost:3000'
 paths:
   /users:
-    get:
-      summary: 'Sample endpoint: Returns details about a particular user'
-      operationId: listUser
+    post:
+      summary: 'Create a new user via some signup method'
+      operationId: createUser
       tags:
         - user
-      parameters:
-        - name: id
-          in: query
-          description: ID of the user
-          required: true
-          schema:
-            type: integer
-            format: int32
       responses:
-        '200':
-          description: 'Sample response: Details about a user by ID'
+        '201':
+          description: 'Returns user and JWT token'
           headers:
             x-next:
               description: A link to the next page of responses
@@ -33,8 +25,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-        default:
-          description: Unexpected error
+        '400':
+          description: Bad Request
           content:
             application/json:
               schema:
